@@ -21,7 +21,7 @@ describe("Web Tables Menu", () => {
     });
   });
 
-  it("[Negative] Register multiple users from CSV without fill Email input", () => {
+  it("[Negative] Register user from CSV without fill Email input", () => {
     cy.fixture("user.csv").then((csvData) => {
       cy.task("parseCSV", csvData).then((users) => {
         webTablesCommands.visit();
@@ -36,7 +36,7 @@ describe("Web Tables Menu", () => {
     });
   });
 
-  it("[Negative] Register multiple users from CSV with fill letter on Age input", () => {
+  it("[Negative] Register user from CSV with fill letter on Age input", () => {
     cy.fixture("user.csv").then((csvData) => {
       cy.task("parseCSV", csvData).then((users) => {
         webTablesCommands.visit();
@@ -51,7 +51,7 @@ describe("Web Tables Menu", () => {
     });
   });
 
-  it("[Negative] Register multiple users from CSV with fill blank on Salary input", () => {
+  it("[Negative] Register user from CSV with fill blank on Salary input", () => {
     cy.fixture("user.csv").then((csvData) => {
       cy.task("parseCSV", csvData).then((users) => {
         webTablesCommands.visit();
