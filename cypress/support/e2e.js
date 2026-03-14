@@ -16,3 +16,4 @@
 // Import commands.js using ES2015 syntax:
 import "../tests/bulkCommands";
 import "../tests/webTablesCommands";
+import "../tests/droppableCommands";

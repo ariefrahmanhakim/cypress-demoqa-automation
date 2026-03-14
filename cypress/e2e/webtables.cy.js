@@ -51,7 +51,7 @@ describe("Web Tables Menu", () => {
     });
   });
 
-  it("[Negative] Register user from CSV with fill blank on Salary input", () => {
+  it("[Negative] Register user from CSV without fill Salary input", () => {
     cy.fixture("user.csv").then((csvData) => {
       cy.task("parseCSV", csvData).then((users) => {
         webTablesCommands.visit();
