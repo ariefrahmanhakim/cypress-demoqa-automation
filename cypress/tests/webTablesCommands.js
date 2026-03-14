@@ -60,6 +60,12 @@ class webTablesCommands {
     // verify user is displayed on the table
     WebTablesPage.dataOnTheTable(data).should("be.visible");
   }
+
+  verifyFormInvalidRequiredField() {
+    // verify form is invalid and required fields are highlighted
+    WebTablesPage.formInvalidRequiredField().should("be.visible");
+  }
+  
 }
 
 export default new webTablesCommands();

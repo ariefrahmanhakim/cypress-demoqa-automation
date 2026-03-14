@@ -25,6 +25,63 @@ class bulkCommands {
 
     webTablesCommands.fillDepartment(user.department);
   }
+
+  fillFormUserOnWebTablesWithoutEmail(user) {
+    webTablesCommands.fillFirstName(user.firstName);
+    webTablesCommands.fillLastName(user.lastName);
+
+    if (user.age !== undefined && user.age !== null && user.age !== "") {
+      webTablesCommands.fillAge(user.age);
+    }
+
+    if (
+      user.salary !== undefined &&
+      user.salary !== null &&
+      user.salary !== ""
+    ) {
+      webTablesCommands.fillSalary(user.salary);
+    }
+
+    webTablesCommands.fillDepartment(user.department);
+  }
+
+  fillFormUserOnWebTablesInvalidAge(user) {
+    webTablesCommands.fillFirstName(user.firstName);
+    webTablesCommands.fillLastName(user.lastName);
+
+    if (user.email) {
+      webTablesCommands.fillEmail(user.email);
+    }
+
+    if (user.age !== undefined && user.age !== null && user.age !== "") {
+      webTablesCommands.fillAge("Invalid");
+    }
+
+    if (
+      user.salary !== undefined &&
+      user.salary !== null &&
+      user.salary !== ""
+    ) {
+      webTablesCommands.fillSalary(user.salary);
+    }
+
+    webTablesCommands.fillDepartment(user.department);
+  }
+
+  fillFormUserOnWebTablesWithoutSalary(user) {
+    webTablesCommands.fillFirstName(user.firstName);
+    webTablesCommands.fillLastName(user.lastName);
+
+    if (user.email) {
+      webTablesCommands.fillEmail(user.email);
+    }
+
+    if (user.age !== undefined && user.age !== null && user.age !== "") {
+      webTablesCommands.fillAge(user.age);
+    }
+
+    webTablesCommands.fillDepartment(user.department);
+  }
 }
 
 export default new bulkCommands();

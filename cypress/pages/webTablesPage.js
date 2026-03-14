@@ -44,6 +44,9 @@ class WebTablesPage {
     return cy.contains("table tbody tr", data);
   }
 
+  formInvalidRequiredField() {
+    return cy.get("#userForm.was-validated");
+  }
 }
 
 export default new WebTablesPage();
