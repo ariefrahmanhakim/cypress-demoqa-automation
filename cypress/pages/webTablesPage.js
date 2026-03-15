@@ -47,6 +47,10 @@ class WebTablesPage {
   formInvalidRequiredField() {
     return cy.get("#userForm.was-validated");
   }
+
+  closeButton() {
+    return cy.get("button.btn-close");
+  }
 }
 
 export default new WebTablesPage();

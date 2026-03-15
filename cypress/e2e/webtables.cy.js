@@ -31,6 +31,9 @@ describe("Web Tables Menu", () => {
           bulkCommands.fillFormUserOnWebTablesWithoutEmail(user);
           webTablesCommands.submit();
           webTablesCommands.verifyFormInvalidRequiredField();
+          webTablesCommands.clickCloseButton();
+          webTablesCommands.search(user.firstName);
+          webTablesCommands.verifyUserNotDisplayed(user.email, { times: 1000 });
         });
       });
     });
@@ -46,6 +49,9 @@ describe("Web Tables Menu", () => {
           bulkCommands.fillFormUserOnWebTablesInvalidAge(user);
           webTablesCommands.submit();
           webTablesCommands.verifyFormInvalidRequiredField();
+          webTablesCommands.clickCloseButton();
+          webTablesCommands.search(user.email);
+          webTablesCommands.verifyUserNotDisplayed(user.email, { times: 1000 });
         });
       });
     });
@@ -61,6 +67,9 @@ describe("Web Tables Menu", () => {
           bulkCommands.fillFormUserOnWebTablesWithoutSalary(user);
           webTablesCommands.submit();
           webTablesCommands.verifyFormInvalidRequiredField();
+          webTablesCommands.clickCloseButton();
+          webTablesCommands.search(user.email);
+          webTablesCommands.verifyUserNotDisplayed(user.email, { times: 1000 });
         });
       });
     });

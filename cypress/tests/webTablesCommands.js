@@ -61,11 +61,20 @@ class webTablesCommands {
     WebTablesPage.dataOnTheTable(data).should("be.visible");
   }
 
+  verifyUserNotDisplayed(data) {
+    // verify user is not displayed on the table
+    WebTablesPage.dataOnTheTable(data).should("not.exist");
+  }
+
   verifyFormInvalidRequiredField() {
     // verify form is invalid and required fields are highlighted
     WebTablesPage.formInvalidRequiredField().should("be.visible");
   }
-  
+
+  clickCloseButton() {
+    // click close button
+    WebTablesPage.closeButton().should("be.visible").scrollIntoView().click();
+  }
 }
 
 export default new webTablesCommands();
