@@ -10,25 +10,25 @@ cypress-transjakarta-test/
 |-- package.json                     # Metadata project, scripts npm, dan dependency
 |-- runner.sh                        # Wrapper script untuk menjalankan Cypress (open/run)
 |-- cypress/
-|   |-- e2e/
-|   |   |-- droppable.cy.js          # Test case E2E untuk fitur droppable
-|   |   |-- resizeable.cy.js         # Test case E2E untuk fitur resizeable
-|   |   `-- webtables.cy.js          # Test case E2E untuk fitur web tables
-|   |-- fixtures/
-|   |   |-- user.csv                 # Data uji CSV (single user)
-|   |   `-- users.csv                # Data uji CSV (multiple users)
-|   |-- pages/
-|   |   |-- droppablePage.js         # Page object untuk halaman droppable
-|   |   |-- resizeablePage.js        # Page object untuk halaman resizeable
-|   |   `-- webTablesPage.js         # Page object untuk halaman web tables
-|   |-- screenshots/                 # Hasil screenshot saat test gagal/diambil
-|   |-- support/
-|   |   `-- e2e.js                   # Setup global Cypress untuk E2E
-|   `-- tests/
-|       |-- bulkCommands.js          # Custom commands untuk operasi bulk/data-driven
-|       |-- droppableCommands.js     # Custom commands khusus droppable
-|       |-- resizeableCommands.js    # Custom commands khusus resizeable
-|       `-- webTablesCommands.js     # Custom commands khusus web tables
+   |-- e2e/
+   |   |-- droppable.cy.js          # Test case E2E untuk fitur droppable
+   |   |-- resizeable.cy.js         # Test case E2E untuk fitur resizeable
+   |   `-- webtables.cy.js          # Test case E2E untuk fitur web tables
+   |-- fixtures/
+   |   |-- user.csv                 # Data uji CSV (single user)
+   |   `-- users.csv                # Data uji CSV (multiple users)
+   |-- pages/
+   |   |-- droppablePage.js         # Page object untuk halaman droppable
+   |   |-- resizeablePage.js        # Page object untuk halaman resizeable
+   |   `-- webTablesPage.js         # Page object untuk halaman web tables
+   |-- screenshots/                 # Hasil screenshot saat test gagal/diambil
+   |-- support/
+   |   `-- e2e.js                   # Setup global Cypress untuk E2E
+   `-- tests/
+       |-- bulkCommands.js          # Custom commands untuk operasi bulk/data-driven
+       |-- droppableCommands.js     # Custom commands khusus droppable
+       |-- resizeableCommands.js    # Custom commands khusus resizeable
+       `-- webTablesCommands.js     # Custom commands khusus web tables
 ```
 
 ## Cara Menjalankan
@@ -48,7 +48,13 @@ sh runner.sh
 ATAU
 
 ```bash
-npx cypress open (interactive) ATAU npx cypress run (headless)
+npx cypress open
+```
+
+ATAU
+
+```bash
+npx cypress run
 ```
 
 Setting pada file runner.sh:
