@@ -54,12 +54,15 @@ npx cypress open
 ATAU
 
 ```bash
-npx cypress run
+npx cypress run --browser "chrome"
 ```
 
 Setting pada file runner.sh:
 
 `open` artinya mode interactive (GUI Cypress kebuka, bisa pilih test manual).
+
+- pilih E2E pada GUI terbuka
+- lalu pilih Chrome
 
 `run` artinya mode headless (jalan tanpa GUI, cocok untuk run cepat/CI).
 
