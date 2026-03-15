@@ -2,7 +2,7 @@
 
 # Set this value and run: sh runner.sh
 # Values: open | run
-DEFAULT_MODE="open"
+DEFAULT_MODE="run"
 # Browser for headless run mode. Change as needed: chrome | edge | electron | firefox
 DEFAULT_RUN_BROWSER="chrome"
 
