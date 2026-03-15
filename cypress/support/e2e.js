@@ -17,3 +17,4 @@
 import "../tests/bulkCommands";
 import "../tests/webTablesCommands";
 import "../tests/droppableCommands";
+import "../tests/resizeableCommands";
